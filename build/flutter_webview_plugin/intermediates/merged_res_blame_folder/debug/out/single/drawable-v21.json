@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "F:\\Nirbaan Express\\build\\flutter_webview_plugin\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\Muzahid\\.gradle\\caches\\transforms-2\\files-2.1\\17e5ed623d880f92c8c90cf8459f37af\\core-1.1.0\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "F:\\Nirbaan Express\\build\\flutter_webview_plugin\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_dialog_material_background.xml",
+        "source": "C:\\Users\\Muzahid\\.gradle\\caches\\transforms-2\\files-2.1\\a7649039f63f09921daef5becd81ba8c\\appcompat-1.1.0\\res\\drawable-v21\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "F:\\Nirbaan Express\\build\\flutter_webview_plugin\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Muzahid\\.gradle\\caches\\transforms-2\\files-2.1\\a7649039f63f09921daef5becd81ba8c\\appcompat-1.1.0\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "F:\\Nirbaan Express\\build\\flutter_webview_plugin\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_list_divider_material.xml",
+        "source": "C:\\Users\\Muzahid\\.gradle\\caches\\transforms-2\\files-2.1\\a7649039f63f09921daef5becd81ba8c\\appcompat-1.1.0\\res\\drawable-v21\\abc_list_divider_material.xml"
+    },
+    {
+        "merged": "F:\\Nirbaan Express\\build\\flutter_webview_plugin\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Muzahid\\.gradle\\caches\\transforms-2\\files-2.1\\a7649039f63f09921daef5becd81ba8c\\appcompat-1.1.0\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "F:\\Nirbaan Express\\build\\flutter_webview_plugin\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\Muzahid\\.gradle\\caches\\transforms-2\\files-2.1\\a7649039f63f09921daef5becd81ba8c\\appcompat-1.1.0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    }
+]

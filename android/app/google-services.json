@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "905935346897",
+    "project_id": "nirbaanexpress-c48aa",
+    "storage_bucket": "nirbaanexpress-c48aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:905935346897:android:61795e76365f1cfb9179f0",
+        "android_client_info": {
+          "package_name": "com.nirbaan.nirbaanexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "905935346897-htvp566i8goa4uoq350il2to5tj2j9sa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPImQ-9fwsj-OvDQfWRcMxQbSwCqUa9FU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "905935346897-htvp566i8goa4uoq350il2to5tj2j9sa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

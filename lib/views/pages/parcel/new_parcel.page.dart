@@ -1,0 +1,97 @@
+import 'package:flutter/material.dart';
+import 'package:fuodz/constants/app_colors.dart';
+import 'package:fuodz/models/vendor_type.dart';
+import 'package:fuodz/utils/ui_spacer.dart';
+import 'package:fuodz/view_models/new_parcel.vm.dart';
+import 'package:fuodz/views/pages/parcel/widgets/package_delivery_info.dart';
+import 'package:fuodz/views/pages/parcel/widgets/package_delivery_parcel_info.dart';
+import 'package:fuodz/views/pages/parcel/widgets/package_delivery_payment.dart';
+import 'package:fuodz/views/pages/parcel/widgets/package_delivery_summary.dart';
+import 'package:fuodz/views/pages/parcel/widgets/package_recipient_info.dart';
+import 'package:fuodz/views/pages/parcel/widgets/package_type_selector.dart';
+import 'package:fuodz/views/pages/parcel/widgets/vendor_package_type_selector.dart';
+import 'package:fuodz/widgets/base.page.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:stacked/stacked.dart';
+import 'package:velocity_x/velocity_x.dart';
+
+class NewParcelPage extends StatelessWidget {
+  const NewParcelPage(this.vendorType, {this.onFinish, Key key})
+      : super(key: key);
+
+  final VendorType vendorType;
+  final Function onFinish;
+  @override
+  Widget build(BuildContext context) {
+    return ViewModelBuilder<NewParcelViewModel>.reactive(
+      viewModelBuilder: () => NewParcelViewModel(context, onFinish, vendorType),
+      onModelReady: (vm) => vm.initialise(),
+      builder: (context, vm, child) {
+        return BasePage(
+          showAppBar: true,
+          showLeadingAction: true,
+          elevation: 0,
+          //showCart: true,
+          title: "Parcel Delivery",
+          appBarColor: context.theme.backgroundColor,
+          appBarItemColor: AppColor.primaryColor,
+          body: VStack(
+            [
+              //
+              UiSpacer.verticalSpace(),
+              //
+              // AnimatedSmoothIndicator(
+              //   activeIndex: vm.activeStep,
+              //   count: 7,
+              //   effect: ColorTransitionEffect(
+              //       activeDotColor: Colors.blue[700],
+              //       activeStrokeWidth: 28,
+              //       strokeWidth: 5,
+              //       dotColor: Colors.blueGrey[200],
+              //       dotHeight: 18,
+              //       dotWidth: 18,
+              //       spacing: 10,
+              //       radius: 2),
+              //   // effect: ExpandingDotsEffect(
+              //   //   activeDotColor: AppColor.primaryColor,
+              //   // ),
+              // ).centered(),
+
+              //
+              PageView(
+                scrollDirection: Axis.vertical,
+                physics: NeverScrollableScrollPhysics(),
+                controller: vm.pageController,
+                children: [
+                  //package type
+                  PackageTypeSelector(vm: vm),
+
+                  //vendors from sort delivery
+                  VendorPackageTypeSelector(vm: vm),
+
+                  //
+                  PackageDeliveryInfo(vm: vm),
+
+                  //receiver info
+                  PackageRecipientInfo(vm: vm),
+
+                  //parcel info
+                  PackageDeliveryParcelInfo(vm: vm),
+
+                  //summary
+                  PackageDeliverySummary(vm: vm),
+
+                  //PAYMENT
+                  PackageDeliveryPayment(vm: vm),
+                ],
+              ).box.make().px20().expand()
+            ],
+          ).pOnly(
+            bottom: context.mq.viewInsets.bottom,
+            // bottom: context.mq.viewPadding.bottom,
+          ),
+        );
+      },
+    );
+  }
+}

@@ -1,0 +1,7 @@
+flutter_application_id:
+  android:
+    id: "com.nirbaan.nirbaanexpress"
+    name: "Nirbaan Express"
+  ios:
+    id: "com.nirbaan.nirbaanexpress"
+    name: "Nirbaan Express"
