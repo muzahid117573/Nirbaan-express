@@ -1347,6 +1347,7 @@ androidx.appcompat.widget.AppCompatEditText:
 androidx.core.view.NestedScrollingChild3
 androidx.core.widget.TextViewKt$addTextChangedListener$3
 com.google.protobuf.DescriptorProtos$SourceCodeInfo$Location
+dev.fluttercommunity.plus.packageinfo.R
 com.google.common.base.Functions$IdentityFunction
 com.google.api.QuotaLimit$1
 com.google.android.gms.internal.base.zaj
@@ -2464,6 +2465,7 @@ com.google.android.gms.common.server.zaa
 androidx.core.graphics.PaintCompat
 com.google.common.collect.FilteredMultimapValues
 com.google.common.collect.RegularImmutableMap$KeysOrValuesAsList
+dev.fluttercommunity.plus.packageinfo.R$integer
 com.google.android.gms.common.images.ImageManager$zad
 com.google.api.LogDescriptorOrBuilder
 com.google.common.hash.BloomFilterStrategies
@@ -5289,6 +5291,7 @@ com.google.firebase.database.collection.LLRBValueNode:
     public boolean shortCircuitingReverseOrderTraversal(com.google.firebase.database.collection.LLRBNode$ShortCircuitingNodeVisitor)
 com.google.android.play.core.splitcompat.h
 androidx.annotation.experimental.Experimental$Level
+dev.fluttercommunity.plus.packageinfo.R$attr
 com.google.common.collect.Sets$SetView
 com.google.android.gms.common.api.ResultCallbacks
 com.google.android.gms.common.api.internal.LifecycleFragment:
@@ -8271,6 +8274,7 @@ com.google.common.collect.HashMultimap
 com.bumptech.glide.load.model.FileLoader:
     private static final java.lang.String TAG
 com.google.android.gms.common.util.concurrent.HandlerExecutor
+dev.fluttercommunity.plus.packageinfo.R$id
 androidx.browser.browseractions.BrowserActionsFallbackMenuUi$2
 kotlin.reflect.KMutableProperty1$Setter
 com.google.firebase.firestore.R$layout
@@ -8509,6 +8513,7 @@ io.grpc.okhttp.internal.framed.FrameWriter:
     public abstract void pushPromise(int,int,java.util.List)
     public abstract void synReply(boolean,int,java.util.List)
     public abstract void headers(int,java.util.List)
+dev.fluttercommunity.plus.packageinfo.R$dimen
 com.google.android.gms.internal.safetynet.zzt
 com.google.android.gms.common.internal.safeparcel.SafeParcelable$Indicator
 com.google.common.io.Java8Compatibility
@@ -8752,6 +8757,7 @@ com.google.common.base.Preconditions:
 kotlin.concurrent.TimersKt
 com.google.zxing.multi.qrcode.QRCodeMultiReader
 com.google.common.collect.TreeTraverser$PostOrderIterator
+dev.fluttercommunity.plus.packageinfo.R$style
 com.google.firebase.firestore.R$id
 com.google.api.HttpRule$PatternCase
 com.google.common.util.concurrent.AsyncFunction
@@ -14596,6 +14602,7 @@ androidx.core.graphics.drawable.RoundedBitmapDrawableFactory$DefaultRoundedBitma
 com.google.firebase.firestore.bundle.NamedQuery
 com.google.zxing.client.result.ParsedResult
 com.google.common.collect.TreeRangeMap$SubRangeMap$1$1
+dev.fluttercommunity.plus.packageinfo.R$drawable
 com.google.common.util.concurrent.Striped$WeakSafeLock
 androidx.core.view.inputmethod.InputContentInfoCompat$InputContentInfoCompatImpl:
     public abstract void releasePermission()
@@ -17483,6 +17490,7 @@ io.grpc.internal.AbstractReadableBuffer:
 kotlin.collections.MapAccessorsKt
 com.google.android.gms.maps.internal.zzbw
 com.google.android.gms.common.internal.constants.ListAppsActivityContract
+dev.fluttercommunity.plus.packageinfo.R$string
 androidx.core.app.Person$Builder
 com.google.common.hash.Crc32cHashFunction
 com.google.firebase.firestore.core.IndexRange$Builder
@@ -17841,6 +17849,7 @@ androidx.core.internal.view.SupportMenuItem:
     public static final int SHOW_AS_ACTION_ALWAYS
     public static final int SHOW_AS_ACTION_WITH_TEXT
     public static final int SHOW_AS_ACTION_COLLAPSE_ACTION_VIEW
+dev.fluttercommunity.plus.packageinfo.R$layout
 com.google.common.primitives.ImmutableIntArray$AsList
 com.google.android.gms.common.api.PendingResult:
     public abstract com.google.android.gms.common.api.Result await()
@@ -22574,6 +22583,7 @@ com.google.firebase.analytics.connector.AnalyticsConnector$AnalyticsConnectorHan
 com.nirbaan.nirbaanexpress.R$drawable
 androidx.drawerlayout.widget.DrawerLayout$DrawerListener
 com.google.android.play.core.appupdate.n
+dev.fluttercommunity.plus.packageinfo.R$color
 com.google.firebase.analytics.connector.R
 kotlin.collections.MovingSubList
 com.google.firebase.firestore.UserDataReader:
@@ -22651,6 +22661,7 @@ com.google.common.primitives.Shorts:
     public static final int BYTES
     public static final short MAX_POWER_OF_TWO
 com.google.common.collect.ImmutableEnumSet$1
+dev.fluttercommunity.plus.packageinfo.R$styleable
 com.squareup.okhttp.internal.Util$1
 androidx.lifecycle.HasDefaultViewModelProviderFactory
 com.bumptech.glide.request.target.CustomViewTarget
@@ -25109,6 +25120,7 @@ kotlin.sequences.SequencesKt__SequencesKt$asSequence$$inlined$Sequence$1
 io.flutter.plugins.imagepicker.R$integer
 androidx.appcompat.widget.AppCompatSpinner$SpinnerPopup:
     public abstract int getHorizontalOriginalOffset()
+dev.fluttercommunity.plus.packageinfo.BuildConfig
 com.google.protobuf.Field$1
 com.google.firebase.storage.R$layout
 kotlin.internal.UProgressionUtilKt
@@ -30960,5 +30972,5 @@ androidx.core.view.ViewCompat$AccessibilityViewProperty:
     private final int mContentChangeType
 androidx.appcompat.view.StandaloneActionMode:
     private boolean mFocusable
-com.journeyapps.barcodescanner.BarcodeCallback$-CC
 androidx.lifecycle.DefaultLifecycleObserver$-CC
+com.journeyapps.barcodescanner.BarcodeCallback$-CC

@@ -46,6 +46,8 @@ android {
     }
 
     defaultConfig {
+         multiDexEnabled true
+
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.nirbaan.nirbaanexpress"
         minSdkVersion 23 //Required for Jitsi

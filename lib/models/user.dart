@@ -8,7 +8,7 @@ class User {
   String countryCode;
   String photo;
   String role;
-  String address;
+  String useraddress;
   String actype;
   String acnumber;
 
@@ -20,7 +20,7 @@ class User {
       this.countryCode,
       this.photo,
       this.role,
-      this.address,
+      this.useraddress,
       this.actype,
       this.acnumber});
 
@@ -30,7 +30,7 @@ class User {
     name = json['name'];
     email = json['email'] ?? "";
     phone = json['phone'];
-    address = json['address'];
+    useraddress = json['useraddress'];
     actype = json['actype'];
     acnumber = json['acnumber'];
     countryCode = json['country_code'];
@@ -45,7 +45,7 @@ class User {
       'name': name,
       'email': email,
       'phone': phone,
-      'address': address,
+      'useraddress': useraddress,
       'actype': actype,
       'acnumber': acnumber,
       'country_code': countryCode,

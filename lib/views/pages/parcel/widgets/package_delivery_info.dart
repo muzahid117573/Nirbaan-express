@@ -25,28 +25,28 @@ class PackageDeliveryInfo extends StatelessWidget {
                 visible: !AppStrings.enableParcelMultipleStops,
                 child: SingleParcelDeliveryStopsView(vm),
               ),
-              Visibility(
-                visible: AppStrings.enableParcelMultipleStops,
-                child: ParcelDeliveryStopsView(vm),
-              ),
+              // Visibility(
+              //   visible: AppStrings.enableParcelMultipleStops,
+              //   child: ParcelDeliveryStopsView(vm),
+              // ),
 
               //ParcelScheduleView
-              ParcelScheduleView(vm),
-              //SCHEDULE
-              Visibility(
-                visible: vm.selectedVendor != null &&
-                    !vm.selectedVendor.allowScheduleOrder,
-                child: VStack(
-                  [
-                    // "DATE & TIME".text.make(),
-                    // "Vendor does not allow order scheduling. So you order will be processed as soon as you place them"
-                    //     .text
-                    //     .color(context.textTheme.bodyText1.color)
-                    //     .sm
-                    //     .make(),
-                  ],
-                ),
-              ),
+              // ParcelScheduleView(vm),
+              // //SCHEDULE
+              // Visibility(
+              //   visible: vm.selectedVendor != null &&
+              //       !vm.selectedVendor.allowScheduleOrder,
+              //   child: VStack(
+              //     [
+              //       // "DATE & TIME".text.make(),
+              //       // "Vendor does not allow order scheduling. So you order will be processed as soon as you place them"
+              //       //     .text
+              //       //     .color(context.textTheme.bodyText1.color)
+              //       //     .sm
+              //       //     .make(),
+              //     ],
+              //   ),
+              // ),
             ],
           ).scrollVertical().expand(),
 

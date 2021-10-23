@@ -17,7 +17,6 @@ class PackageRecipientInfo extends StatelessWidget {
       key: vm.recipientInfoFormKey,
       child: VStack(
         [
-          //
           CustomListView(
             dataSet: vm.recipientNamesTEC,
             itemBuilder: (context, index) {

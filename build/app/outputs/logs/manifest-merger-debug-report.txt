@@ -27,6 +27,7 @@ MERGED from [:shared_preferences] F:\Nirbaan Express\build\shared_preferences\in
 MERGED from [:sqflite] F:\Nirbaan Express\build\sqflite\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:in_app_review] F:\Nirbaan Express\build\in_app_review\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider] F:\Nirbaan Express\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:package_info_plus] F:\Nirbaan Express\build\package_info_plus\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:url_launcher] F:\Nirbaan Express\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-14:12
 MERGED from [:location] F:\Nirbaan Express\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-18:12
 MERGED from [:android_intent] F:\Nirbaan Express\build\android_intent\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
@@ -359,6 +360,8 @@ MERGED from [:in_app_review] F:\Nirbaan Express\build\in_app_review\intermediate
 MERGED from [:in_app_review] F:\Nirbaan Express\build\in_app_review\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] F:\Nirbaan Express\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] F:\Nirbaan Express\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:package_info_plus] F:\Nirbaan Express\build\package_info_plus\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:package_info_plus] F:\Nirbaan Express\build\package_info_plus\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:url_launcher] F:\Nirbaan Express\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:url_launcher] F:\Nirbaan Express\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:location] F:\Nirbaan Express\build\location\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44

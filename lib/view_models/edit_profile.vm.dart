@@ -52,9 +52,10 @@ class EditProfileViewModel extends MyBaseViewModel {
     nameTEC.text = currentUser.name;
     emailTEC.text = currentUser.email;
     phoneTEC.text = currentUser.phone;
-    addressTEC.text = currentUser.address;
+    addressTEC.text = currentUser.useraddress;
     actypeTEC.text = currentUser.actype;
     acnumTEC.text = currentUser.acnumber;
+    print(currentUser.useraddress);
 
     notifyListeners();
   }

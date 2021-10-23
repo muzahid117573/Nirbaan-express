@@ -1,10 +1,11 @@
+import 'dart:async';
 import 'dart:ui';
 
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:fuodz/constants/app_colors.dart';
-import 'package:fuodz/constants/app_strings.dart';
+
 import 'package:fuodz/models/vendor_type.dart';
 import 'package:fuodz/services/auth.service.dart';
 import 'package:fuodz/utils/ui_spacer.dart';
@@ -16,6 +17,7 @@ import 'package:fuodz/views/pages/profile/profile.page.dart';
 import 'package:fuodz/widgets/base.page.dart';
 import 'package:fuodz/widgets/busy_indicator.dart';
 import 'package:fuodz/widgets/custom_text_form_field.dart';
+import 'package:new_version/new_version.dart';
 
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:stacked/stacked.dart';
@@ -31,15 +33,16 @@ class ParcelPage extends StatefulWidget {
 }
 
 class _ParcelPageState extends State<ParcelPage> {
-  var pendinglength;
-  var acceptlength;
-  var canceledlength;
-  var inshiplength;
-  var deliveredlength;
-  var pikedlength;
+  String pendinglength;
+  String acceptlength;
+  String canceledlength;
+  String inshiplength;
+  String deliveredlength;
+  String pikedlength;
 
   int _selectedIndex = 0;
   int pageindex = 0;
+
   @override
   Widget build(BuildContext context) {
     List<Widget> pagelist = <Widget>[
@@ -54,12 +57,41 @@ class _ParcelPageState extends State<ParcelPage> {
     );
   }
 
+  void _checkVersion() async {
+    final newVersion = NewVersion(
+      androidId: 'com.nirbaan.nirbaanexpress',
+    );
+  }
+
+  basicStatusCheck(NewVersion newVersion) {
+    newVersion.showAlertIfNecessary(context: context);
+  }
+
+  advancedStatusCheck(NewVersion newVersion) async {
+    final status = await newVersion.getVersionStatus();
+    if (status != null) {
+      debugPrint(status.releaseNotes);
+      debugPrint(status.appStoreLink);
+      debugPrint(status.localVersion);
+      debugPrint(status.storeVersion);
+      debugPrint(status.canUpdate.toString());
+      newVersion.showUpdateDialog(
+          context: context,
+          versionStatus: status,
+          dialogTitle: 'New Version Available',
+          dialogText:
+              'Please Update The App To Get The Best Experience & New Features!',
+          updateButtonText: "Let's Update");
+    }
+  }
+
   BottomNavigationBar buildBottomNavigationBar() {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
       currentIndex: _selectedIndex,
       onTap: (value) {
         setState(() {
+          checkStatus();
           pageindex = value;
           _selectedIndex = value;
         });
@@ -84,6 +116,8 @@ class _ParcelPageState extends State<ParcelPage> {
   }
 
   Widget createFooOrBarWidget(BuildContext context) {
+    checkStatus();
+    _checkVersion();
     String pendingCount = pendinglength.toString();
     String acceptCount = acceptlength.toString();
     String cancelCount = canceledlength.toString();
@@ -564,17 +598,15 @@ class _ParcelPageState extends State<ParcelPage> {
                     // RecentOrdersView(vendorType: widget.vendorType),
                     // UiSpacer.verticalSpace(),
                   ],
-                ).scrollVertical(),
+                ),
               ),
             ),
           );
         });
   }
 
-  Future<bool> _getpendingStatus() async {
+  Future<bool> getpendingStatus() async {
     final userToken = await AuthServices.getAuthBearerToken();
-
-    print(userToken);
 
     Map<String, String> headers = {
       "Content-Type": "application/json",
@@ -585,11 +617,25 @@ class _ParcelPageState extends State<ParcelPage> {
     var urlorder =
         Uri.parse('https://admin.nirbaanexpress.com/api/order/pending');
     var response = await http.get(urlorder, headers: headers);
+    int code = response.statusCode;
+    dynamic body = response.body ?? null;
+    switch (code) {
+      case 200:
+        try {
+          pendinglength = body is Map ? "0" : body;
+        } catch (error) {
+          print("Message reading error ==> $error");
+        }
 
-    pendinglength = response.body;
+        break;
+      default:
+        pendinglength = response.body ?? "0";
+
+        break;
+    }
   }
 
-  Future<bool> _getAcceptedStatus() async {
+  Future<bool> getAcceptedStatus() async {
     final userToken = await AuthServices.getAuthBearerToken();
 
     print(userToken);
@@ -604,10 +650,25 @@ class _ParcelPageState extends State<ParcelPage> {
         Uri.parse('https://admin.nirbaanexpress.com/api/order/preparing');
     var response = await http.get(urlorder, headers: headers);
 
-    acceptlength = response.body;
+    int code = response.statusCode;
+    dynamic body = response.body ?? null;
+    switch (code) {
+      case 200:
+        try {
+          acceptlength = body is Map ? "0" : body;
+        } catch (error) {
+          print("Message reading error ==> $error");
+        }
+
+        break;
+      default:
+        acceptlength = response.body ?? "0";
+
+        break;
+    }
   }
 
-  Future<bool> _getPickedStatus() async {
+  Future<bool> getPickedStatus() async {
     final userToken = await AuthServices.getAuthBearerToken();
 
     print(userToken);
@@ -622,10 +683,25 @@ class _ParcelPageState extends State<ParcelPage> {
         Uri.parse('https://admin.nirbaanexpress.com/api/order/ready');
     var response = await http.get(urlorder, headers: headers);
 
-    pikedlength = response.body;
+    int code = response.statusCode;
+    dynamic body = response.body ?? null;
+    switch (code) {
+      case 200:
+        try {
+          pikedlength = body is Map ? "0" : body;
+        } catch (error) {
+          print("Message reading error ==> $error");
+        }
+
+        break;
+      default:
+        pikedlength = response.body ?? "0";
+
+        break;
+    }
   }
 
-  Future<bool> _getInshipStatus() async {
+  Future<bool> getInshipStatus() async {
     final userToken = await AuthServices.getAuthBearerToken();
 
     print(userToken);
@@ -640,10 +716,25 @@ class _ParcelPageState extends State<ParcelPage> {
         Uri.parse('https://admin.nirbaanexpress.com/api/order/enroute');
     var response = await http.get(urlorder, headers: headers);
 
-    inshiplength = response.body;
+    int code = response.statusCode;
+    dynamic body = response.body ?? null;
+    switch (code) {
+      case 200:
+        try {
+          inshiplength = body is Map ? "0" : body;
+        } catch (error) {
+          print("Message reading error ==> $error");
+        }
+
+        break;
+      default:
+        inshiplength = response.body ?? "0";
+
+        break;
+    }
   }
 
-  Future<bool> _getDeliveredStatus() async {
+  Future<bool> getDeliveredStatus() async {
     final userToken = await AuthServices.getAuthBearerToken();
 
     print(userToken);
@@ -658,10 +749,25 @@ class _ParcelPageState extends State<ParcelPage> {
         Uri.parse('https://admin.nirbaanexpress.com/api/order/delivered');
     var response = await http.get(urlorder, headers: headers);
 
-    deliveredlength = response.body;
+    int code = response.statusCode;
+    dynamic body = response.body ?? null;
+    switch (code) {
+      case 200:
+        try {
+          deliveredlength = body is Map ? "0" : body;
+        } catch (error) {
+          print("Message reading error ==> $error");
+        }
+
+        break;
+      default:
+        deliveredlength = response.body ?? "0";
+
+        break;
+    }
   }
 
-  Future<bool> _getCancelledStatus() async {
+  Future<bool> getCancelledStatus() async {
     final userToken = await AuthServices.getAuthBearerToken();
 
     print(userToken);
@@ -676,37 +782,36 @@ class _ParcelPageState extends State<ParcelPage> {
         Uri.parse('https://admin.nirbaanexpress.com/api/order/cancelled');
     var response = await http.get(urlorder, headers: headers);
 
-    canceledlength = response.body;
-  }
+    int code = response.statusCode;
+    dynamic body = response.body ?? null;
+    switch (code) {
+      case 200:
+        try {
+          canceledlength = body is Map ? "0" : body;
+        } catch (error) {
+          print("Message reading error ==> $error");
+        }
 
-  @override
-  void initState() {
-    if (isAuthenticated()) {
-      _getAcceptedStatus();
-      _getpendingStatus();
-      _getCancelledStatus();
-      _getDeliveredStatus();
-      _getPickedStatus();
-      _getInshipStatus();
+        break;
+      default:
+        canceledlength = response.body ?? "0";
+
+        break;
     }
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    if (isAuthenticated()) {
-      _getAcceptedStatus();
-      _getpendingStatus();
-      _getCancelledStatus();
-      _getDeliveredStatus();
-      _getPickedStatus();
-      _getInshipStatus();
-    }
-
-    super.dispose();
   }
 
   bool isAuthenticated() {
     return AuthServices.authenticated();
+  }
+
+  void checkStatus() {
+    if (isAuthenticated()) {
+      getAcceptedStatus();
+      getCancelledStatus();
+      getDeliveredStatus();
+      getInshipStatus();
+      getPickedStatus();
+      getpendingStatus();
+    }
   }
 }

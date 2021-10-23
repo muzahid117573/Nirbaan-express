@@ -3101,6 +3101,7 @@ Referenced Strings:
   bufferAllocator
   buffered_nanos
   buildNumber
+  buildSignature
   buildingsEnabled
   bulkId
   bundleId
@@ -3644,6 +3645,7 @@ Referenced Strings:
   details
   details_
   dev.britannio.in_app_review
+  dev.fluttercommunity.plus/package_info
   device
   deviceId
   dimen

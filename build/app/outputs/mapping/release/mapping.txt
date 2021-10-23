@@ -1,7 +1,7 @@
 # compiler: R8
 # compiler_version: 2.1.75
 # min_api: 23
-# pg_map_id: 7c06f21
+# pg_map_id: 18b7060
 # common_typos_disable
 $r8$backportedMethods$utility$Long$1$hashCode -> a:
     int hashCode(long) -> a
@@ -35832,6 +35832,16 @@ dev.britannio.in_app_review.InAppReviewPlugin -> e.a.a.d:
     boolean noContextOrActivity(io.flutter.plugin.common.MethodChannel$Result) -> q
     void openStoreListing(io.flutter.plugin.common.MethodChannel$Result) -> r
     void requestReview(io.flutter.plugin.common.MethodChannel$Result) -> s
+dev.fluttercommunity.plus.packageinfo.PackageInfoPlugin -> e.b.a.a.a:
+    io.flutter.plugin.common.MethodChannel methodChannel -> e
+    android.content.Context applicationContext -> d
+    void onMethodCall(io.flutter.plugin.common.MethodCall,io.flutter.plugin.common.MethodChannel$Result) -> F
+    java.lang.String bytesToHex(byte[]) -> a
+    java.lang.String getBuildSignature(android.content.pm.PackageManager) -> b
+    long getLongVersionCode(android.content.pm.PackageInfo) -> c
+    java.lang.String signatureToSha1(byte[]) -> d
+    void onAttachedToEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> e
+    void onDetachedFromEngine(io.flutter.embedding.engine.plugins.FlutterPlugin$FlutterPluginBinding) -> i
 io.flutter.FlutterInjector -> f.a.a:
     io.flutter.embedding.engine.loader.FlutterLoader flutterLoader -> a
     io.flutter.embedding.engine.deferredcomponents.DeferredComponentManager deferredComponentManager -> b

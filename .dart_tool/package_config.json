@@ -218,6 +218,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "csslib",
+      "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/csslib-0.17.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.3",
       "packageUri": "lib/",
@@ -614,6 +620,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "html",
+      "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/html-0.15.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http",
       "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.3",
       "packageUri": "lib/",
@@ -770,6 +782,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "new_version",
+      "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/new_version-0.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "observable_ish",
       "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/observable_ish-2.1.5",
       "packageUri": "lib/",
@@ -796,6 +814,42 @@
     {
       "name": "package_info",
       "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/package_info-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_info_plus",
+      "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/package_info_plus-1.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_info_plus_linux",
+      "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/package_info_plus_linux-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_info_plus_macos",
+      "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/package_info_plus_macos-1.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_info_plus_platform_interface",
+      "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/package_info_plus_platform_interface-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_info_plus_web",
+      "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/package_info_plus_web-1.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "package_info_plus_windows",
+      "rootUri": "file:///C:/flutter_windows_2.0.6-stable/flutter/.pub-cache/hosted/pub.dartlang.org/package_info_plus_windows-1.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -1268,7 +1322,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-10-22T05:35:23.228622Z",
+  "generated": "2021-10-22T23:56:46.747496Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }
